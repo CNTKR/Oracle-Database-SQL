@@ -1,6 +1,6 @@
-#Oracle-Database-SQL Beginner to Advance 
-Topics                          
-Introduction                        
+#Oracle-Database-SQL Beginner to Advance Topics  
+
+Introduction||                        
 Data Types||
 Retrieving the Data||
 Case sensitivity||
@@ -23,5 +23,5 @@ ER schema||
 Normalization|| 
 Flat file model||
 Relational model||
-Assignment Queries||
+Assignment Queries
 ![image](https://user-images.githubusercontent.com/126503294/222977309-692c70ad-e9b2-4f09-b133-62375e834b2d.png)
