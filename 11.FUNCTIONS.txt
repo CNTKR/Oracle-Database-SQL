@@ -1,0 +1,216 @@
+FUNCTIONS 
+
+In sql we have two types functions :
+
+1)single row functions
+
+
+Single row functions are such functions which will accept a single row as input (or) it accepts multiple rows as input but produces one result per row.
+
+2)multiple row functions 
+
+Multiple row functions/group functions/aggregate functions are such functions which will accept a single row or multiple rows as input but produces one result per group
+
+Types of single row functions:-
+-------------------------------
+* Character  Functions
+* Number     Functions
+* General    Functions
+* Date       Functions
+* Conversion Functions
+
+Write a query to display uppercase of data 'Akash’ .
+
+select upper('Akash')
+from dual;
+
+Write a query to display lowercase of data 'Pandey'.
+
+select lower('PAndey')
+from dual;
+
+Write a query to display Initial letter capital of data 'kodnest'
+
+select initcap('kodnest')
+from dual;
+
+Write a query to display all the firstnames of the employees in uppercase.
+
+select upper(f_name)
+from emp;
+
+Write a query to display all the FirstNames and lastnames of the employees in uppercase where lastname is 'Pandey'.
+
+select upper(f_name||'Pandey')
+from emp;
+
+
+Write a query to display F_name , l_names and salaries whose F_name is 'Akash' in any case
+
+select lower(f_name),l_name,salary
+from emp
+where f_name='Akash';
+
+
+Write a query to concatenate data 'Akash' & 'Pandey'.
+select 'Akash'||'Pandey'
+from dual;
+
+
+Write a query to concatenate data of f_name and l_name of all the employees from EMP table.
+
+select f_name||l_name 
+from emp;
+
+
+Write a query to combine the data ‘1111’ and ‘2222’.
+
+select '1111'||'2222'
+from dual;
+
+Write a query to combine the data ‘1111’ and ‘Ramu’
+
+select '1111'||'ramu'
+from dual;
+
+Write a query to combine the data ‘1111’ with null
+
+select '1111'||null
+from dual;
+
+Write a query to find the length of the string 'Prabhakaran'.
+select length('prabhakaran')
+from dual;
+
+Write a query to find the length of all the f_names
+
+select length(f_name)
+from emp;
+
+Write a query to find the length of 1111
+
+select length(1111)
+from dual;
+
+Write a query to display the length of null
+select length(null)
+from dual;
+
+Write a query to display the substring of the string 'PRABHAKARAN' from 2nd position extract 5 characters.
+
+select substr('PRABHAKARAN',2,5)
+from dual;
+
+
+Write a query to display the substring 'oha' from the string 'RajaRamMohanRoy'
+
+select substr('RajaRamMohanRoy',8,3)
+from dual;
+
+Write a query to display the position of the character 'a' in the string 'Pandey'.
+
+select instr('Pandey','a')
+from dual;
+
+Write a query to display the position of the character 'a' in all the firstnames.
+
+select instr(f_name,'a')
+from emp;
+
+
+ Write a query to display the substring 'bha' from the f_name where f_name is 
+‘Prabhakaran'(use both substring and instring)
+
+select substr('Prabhakaran',instr('Prabhakaran','b'),3)
+from dual;
+
+Write a query to trim the leading 'm' in the string 'malayalam'
+
+select trim(leading 'm' from 'maliyalam')
+from dual;
+
+Write a query to trim the trailing 'm' in the string ' malayalam '
+
+select trim(trailing 'm' from 'maliyalam')
+from dual;
+
+Write a query to trim the both 'm' in the string ' malayalam '
+
+select trim(both 'm' from 'maliyalam')
+from dual;
+
+(or)
+
+select trim('m' from 'maliyalam')
+from dual;
+
+Write a query to display the data ‘Sharma ’ in the format ‘####Sharma’.
+
+select lpad('Sharma' ,10, '#')
+from dual;
+
+Write a query to display the data ‘Sharma ’ in the format ‘Sharma####’.
+
+select rpad('Sharma',10,'#')
+from dual;
+
+
+Write a query to display the data ‘Sharma ’ in the format ‘Sharma#!#!’.
+
+select rpad('Sharma',10,'#!#!')
+from dual;
+
+What would be the output of the following query
+Select round(45.326,2)
+From dual;
+
+ROUND(45.326,2)
+45.33
+
+What would be the output of the following query
+Select round(1234.356,1)
+From dual;
+
+ROUND(1234.356,1)
+1234.4
+
+What would be the output of the following query
+Select round(2678.345,-2)
+From dual;
+
+ROUND(2678.345,-2)
+2700
+
+What would be the output of the following query.
+Select round(123,-2)
+From dual;
+
+ROUND(123,-2)
+100
+
+What would be the output of the following query
+Select trunc(45.326,2)
+From dual;
+
+TRUNC(45.326,2)
+45.32
+
+
+What would be the output of the following query
+Select trunc(1234.356,1)
+From dual;
+
+TRUNC(1234.356,1)
+1234.3
+
+
+What would be the output of the following query
+Select mod(120,2)
+From dual;
+
+MOD(120,2)
+0
+
+
+
+
