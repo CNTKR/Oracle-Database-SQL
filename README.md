@@ -1,6 +1,6 @@
-#Oracle-Database-SQL Beginner to Advance Topics  
+#Oracle-Database-SQL Beginner to Advance Topics 
 
-Introduction||                        
+Introduction                     
 Data Types||
 Retrieving the Data||
 Case sensitivity||
