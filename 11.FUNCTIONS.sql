@@ -211,6 +211,120 @@ From dual;
 MOD(120,2)
 0
 
+Write a query to display the commission_pct. If commission_pct is null replace with 0.
+
+select nvl(commission_pct,0)
+from emp;
+
+Write a query to display the commission_pct. If commission_pct is null replace with 0 else replace with 5.
+
+select nvl2(commission_pct,5,0)
+from emp;
 
 
+Write a query to display the f_name , l_name , length of f_name, length of l_name for all
+employees . if length of f_name is equal to length of l_name display null if length of f_name is
+not equal to length of l_name display length of f_name
+
+
+Write a query to display systems date.
+select Sysdate
+from dual;
+
+Write a query to display the number of months between the dates 14-nov-2014 and 14-feb-2014
+select months_between('14-nov-2014','14-feb-2014')
+from dual;
+
+
+Write a query in order to add 9 months for the date 14-feb-2014
+
+select add_months('14-nov-2014',9)
+from dual;
+
+Write a query in order to add 9 months for the date 14-feb-2014 in reverse order
+select add_months('14-nov-2014',-9)
+from dual;
+
+Write a query to find the date of the next Saturday after the date 08-dec-2012
+select next_day('08-dec-2012','saturday')
+from dual;
+
+Write a query to display the last day of the below specified date:
+2022-06-18
+select last_day('18-jun-2022')
+from dual;
+
+write a query to display the l_name, hire_date where the hire_date should be displayed in the
+format dd/mm
+
+select l_name, to_char(hire_date,'dd/mm')
+from emp;
+
+
+Write a query to display the l_name and salary . the salary should be displayed in the format
+$99,999.99
+select l_name, to_char(salary,'$99,999,99')
+from emp;
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+MULTIROW FUNCTIONS:-Multi row functions are also called as group functions.it takes input in single row and also in multiple rows but it only gives output in as group.
+
+*Count()
+*Sum()
+*Min()
+*Max()
+*Avg()
+
+
+write a query to display count of all the rows present in emp table
+select count('dpt_id')
+from emp;
+
+write a query to display the count of distinct salaries in emp table.
+select distinct count (salary)
+from emp;
+
+write a query to display the minimum of all the salaries from emp table
+select  min (salary)
+from emp;
+
+write a query to display the minimum of all the salaries excluding duplica
+select distinct min(salary)
+from emp;
+
+write a query to display the minimum of hiredate from emp table
+select min(hire_date)
+from emp;
+
+write a query to display the maximum of all the salaries from emp table
+select max(salary)
+from emp;
+
+write a query to display the maximum of all the salaries excluding duplicates
+select  distinct max(salary)
+from emp;
+
+write a query to display the maximum of hiredate from emp table
+select  distinct max(hire_date)
+from emp;
+
+write a query to display the sum of all the salaries from emp table
+select sum(Salary)
+from emp;
+
+
+write a query to display the average of all the salaries from emp table
+select avg(Salary)
+from emp;
+
+
+write a query to display the average of all the salaries excluding duplicates
+select distant avg(salary)
+from emp;
+
+write a query to display the hiredate of oldest employee in the emp table
+select max(hire_date)
+from emp;
+
+
+-----------------------------------------------------------------------------------
 
